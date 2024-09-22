@@ -33,7 +33,7 @@ jobs:
           submodules: 'recursive'
 
       - name: Build
-        run: script/build
+        run: build
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.0      
