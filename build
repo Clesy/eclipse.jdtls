@@ -8,14 +8,6 @@ if [ -z "${JAVA_HOME:-}" ]; then
     exit 1
 fi
 
-# Ensure required commands are available
-for cmd in curl zip mvn; do
-    if ! command -v "$cmd" &> /dev/null; then
-        echo "Error: '$cmd' command not found. Please install it."
-        exit 1
-    fi
-done
-
 # Clean the dist directory
 rm -rf dist
 mkdir -p dist
